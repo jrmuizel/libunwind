@@ -40,7 +40,7 @@ struct dwarf_cursor;	/* forward-declaration */
 
 #include "dwarf-config.h"
 #ifndef UNW_REMOTE_ONLY
-#include <link.h>
+//#include <link.h>
 #endif
 #include <pthread.h>
 
@@ -381,6 +381,7 @@ struct dwarf_callback_data
 
 extern int dwarf_init (void);
 #ifndef UNW_REMOTE_ONLY
+struct dl_phdr_info;
 extern int dwarf_callback (struct dl_phdr_info *info, size_t size, void *ptr);
 extern int dwarf_find_proc_info (unw_addr_space_t as, unw_word_t ip,
 				 unw_proc_info_t *pi,

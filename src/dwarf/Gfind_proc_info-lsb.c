@@ -27,7 +27,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  */
    (http://www.linuxbase.org/spec/).  */
 
 #ifndef UNW_REMOTE_ONLY
-#include <link.h>
+//#include <link.h>
 #endif /* !UNW_REMOTE_ONLY */
 #include <stddef.h>
 #include <stdio.h>
@@ -534,7 +534,7 @@ dwarf_find_debug_frame (int found, unw_dyn_info_t *di_debug, unw_word_t ip,
 #endif /* CONFIG_DEBUG_FRAME */
 
 #ifndef UNW_REMOTE_ONLY
-
+#include "dl-iterate-phdr.h"
 /* ptr is a pointer to a dwarf_callback_data structure and, on entry,
    member ip contains the instruction-pointer we're looking
    for.  */
