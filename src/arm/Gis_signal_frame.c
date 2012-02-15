@@ -26,6 +26,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  */
 #include <stdio.h>
 #include "unwind_i.h"
 
+#define __linux__
 #ifdef __linux__
 #define ARM_NR_sigreturn 119
 #define ARM_NR_rt_sigreturn 173

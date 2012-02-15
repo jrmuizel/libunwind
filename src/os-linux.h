@@ -275,6 +275,8 @@ maps_next (struct map_iterator *mi,
       cp = scan_string (cp, NULL, 0);
       if (dash != '-' || colon != ':')
 	continue;	/* skip line with unknown or bad format */
+      if (perm[0] != 'r')
+        continue;
       return 1;
     }
   return 0;
