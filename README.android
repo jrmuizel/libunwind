@@ -1,1 +1,4 @@
-./configure CC=arm-eabi-gcc CPPFLAGS="-I/home/jrmuizel/android-ndk-r5c/platforms/android-5/arch-arm/usr/include/" CFLAGS="-march=armv7-a -mthumb -mfpu=vfp -mfloat-abi=softfp -nostdlib" LDFLAGS="-Wl,-rpath-link=/home/jrmuizel/android-ndk-r5c/platforms/android-5/arch-arm/usr/lib/ -L/home/jrmuizel/android-ndk-r5c/platforms/android-5/arch-arm/usr/lib/" LIBS="-lc -lgcc" -host=arm-eabi 
+
+export NDK_SROOT=....../android-ndk-r9d/platforms/android-18/arch-arm/
+
+./configure CC=arm-linux-androideabi-gcc CPPFLAGS="--sysroot=${NDK_SROOT}" CFLAGS="-march=armv7-a -mthumb -mfpu=vfp -mfloat-abi=softfp -nostdlib --sysroot=${NDK_SROOT}" LDFLAGS="--sysroot=${NDK_SROOT}" -host=arm-linux-androideabi --prefix=/tmp/libunwind_inst LIBS="-lc -lgcc"
